@@ -1,26 +1,167 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark-mode, .dark-mode *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  
+  --color-accent: #fbbf24;
+  --color-b50: #e6f1fb;
+  --color-b100: #b5d4f4;
+  --color-b200: #85b7eb;
+  --color-b300: #5499e0;
+  --color-b400: #378add;
+  --color-b500: #2270c8;
+  --color-b600: #185fa5;
+  --color-b700: #104d88;
+  --color-b800: #0c447c;
+  --color-b900: #042c53;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-theme-bg: var(--bg);
+  --color-theme-card: var(--bg-card);
+  --color-theme-soft: var(--bg-soft);
+  --color-theme-border: var(--border);
+  --color-theme-border-md: var(--border-md);
+  --color-theme-text: var(--text-primary);
+  --color-theme-text-2: var(--text-2);
+  --color-theme-text-3: var(--text-3);
+  --color-theme-text-muted: var(--text-muted);
+
+  --shadow-sm: 0 2px 8px var(--shadow-color-sm);
+  --shadow-md: 0 8px 24px var(--shadow-color-md);
+  --shadow-lg: 0 16px 48px var(--shadow-color-lg);
+
+  --animate-starsFloat: starsFloat 60s linear infinite;
+
+  @keyframes starsFloat {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-60px);
+    }
+  }
+
+  @keyframes shootingStar {
+    0% {
+      transform: translateX(0) translateY(0) rotate(-45deg) scale(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-1000px) translateY(1000px) rotate(-45deg) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes moonFloat {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(10px);
+    }
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) scale(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.5;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(-100px) scale(1);
+      opacity: 0;
+    }
   }
 }
 
+.shooting-star {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff, transparent);
+  animation: shootingStar 3s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.dark-mode .shooting-star {
+  background: linear-gradient(90deg, #ffffff, transparent);
+}
+
+/* Hide shooting stars in light mode if background is too white */
+body:not(.dark-mode) .shooting-star {
+  background: linear-gradient(90deg, var(--color-b400), transparent);
+  opacity: 0.15;
+}
+
+.moon-element {
+  animation: moonFloat 15s ease-in-out infinite;
+}
+
+.twinkle-star {
+  animation: twinkle var(--duration, 3s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.floating-particle {
+  animation: floatUp var(--duration, 10s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  background: radial-gradient(circle, var(--color-b300) 0%, transparent 70%);
+}
+
+:root {
+  --bg: #fafaf9;
+  --bg-card: #f1f1f0;
+  --bg-soft: #e5e5e4;
+  --border: rgba(4, 44, 83, 0.1);
+  --border-md: rgba(4, 44, 83, 0.18);
+  --text-primary: #042c53;
+  --text-muted: #4b5563;
+  --accent: #fbbf24;
+}
+
+body.dark-mode {
+  --bg: #050f1c;
+  --bg-card: #111a2e;
+  --bg-soft: #1e293b;
+  --border: rgba(181, 212, 244, 0.1);
+  --border-md: rgba(181, 212, 244, 0.2);
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #fbbf24;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #5499e0;
+  border-radius: 99px;
 }
