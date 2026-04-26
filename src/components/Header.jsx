@@ -33,7 +33,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-b900 px-10 border-b border-b100/10 sticky top-0 z-50 shadow-[0_2px_20px_rgba(0,0,0,0.25)]">
+    <header className="bg-b900 px-4 md:px-10 border-b border-b100/10 sticky top-0 z-50 shadow-[0_2px_20px_rgba(0,0,0,0.25)]">
       <nav className="flex justify-between items-center max-w-[1200px] mx-auto h-16">
         <div className="hover:opacity-80 transition-opacity duration-200">
           <Link href="/" className="flex items-center gap-2">

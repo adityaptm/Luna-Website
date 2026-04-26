@@ -13,7 +13,7 @@ export default function GameLanaPage() {
         <p className="text-slate-800 dark:text-slate-300 text-lg font-medium">Mainkan game seru bertema Lana langsung dari browser kamu.</p>
       </div>
 
-      <section className="bg-slate-900 rounded-[32px] overflow-hidden shadow-2xl border-4 border-accent relative aspect-video w-full mb-12">
+      <section className="bg-slate-900 rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 md:border-4 border-accent relative aspect-[4/3] md:aspect-video w-full mb-12 min-h-[400px] md:min-h-0">
         <iframe 
           src={GAME_URL}
           className="w-full h-full border-0"

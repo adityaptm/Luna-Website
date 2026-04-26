@@ -12,7 +12,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(1.5px_1.5px_at_15%_20%,rgba(255,255,255,0.7),transparent),radial-gradient(1px_1px_at_35%_60%,rgba(255,255,255,0.5),transparent),radial-gradient(2px_2px_at_55%_15%,rgba(255,255,255,0.6),transparent)] animate-starsFloat opacity-60"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             {/* Badge Kecil di Atas */}
             <span className="inline-block py-1.5 px-4 rounded-full bg-b600/20 border border-b400/30 text-b100 text-xs font-bold tracking-[0.15em] uppercase mb-6 shadow-sm">
@@ -20,7 +20,7 @@ export default function Home() {
             </span>
 
             {/* Title dengan Gradient Halus */}
-            <h1 className="text-5xl md:text-7xl font-display font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-b100 leading-tight">
+            <h1 className="text-4xl md:text-7xl font-display font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-b100 leading-tight">
               Aurhel Alana <span className="text-b300">Gen 12</span>
             </h1>
 
