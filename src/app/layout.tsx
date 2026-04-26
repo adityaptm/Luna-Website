@@ -37,9 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
           rel="stylesheet"
@@ -53,7 +52,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col transition-colors duration-300 relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col transition-colors duration-300 relative overflow-x-hidden`}
       >
         {/* Background Animations */}
         <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
@@ -104,7 +103,7 @@ export default function RootLayout({
         </div>
 
         <Header />
-        <main className="flex-1 w-full max-w-[1200px] mx-auto my-8 px-4 sm:px-6 lg:px-8 relative z-10">
+        <main className="flex-1 w-full max-w-[1200px] mx-auto my-6 px-4 md:px-6 relative z-10">
           {children}
         </main>
         <Footer />

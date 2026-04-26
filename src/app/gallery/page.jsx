@@ -8,7 +8,7 @@ export default function GalleryPage() {
   ];
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-5 md:px-10">
+    <div className="w-full">
       <div className="mb-12">
         <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-950 dark:text-white mb-4">Gallery Aurhel Alana</h1>
         <p className="text-slate-800 dark:text-slate-300 text-lg mb-8 font-medium">Kumpulan momen dan foto-foto terbaik Lana.</p>

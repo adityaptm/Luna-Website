@@ -5,7 +5,7 @@ export default function GameLanaPage() {
   const GAME_URL = "https://adityaptm.github.io/Game-Lana-Go-Fight/?fbclid=PAT01DUARbDPVleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaeEaHZzRdb8WL8F3ixucebeykAJuQ5Wez3ZcK2hIimrWzdiABAuzYM0Wkrqzg_aem_nmnpIgrBOGe3vJzK_ikqdQ";
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-5 md:px-10">
+    <div className="w-full">
       <div className="mb-10">
         <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-950 dark:text-white mb-4 flex items-center gap-4">
           Lana Go Fight! <i className="bx bx-game text-accent"></i>
