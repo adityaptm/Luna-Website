@@ -22,24 +22,25 @@ export async function GET() {
     }
 
     // 2. Fetch data member Lana (dengan cara pengiriman Key ganda)
-    // Menambahkan apikey di URL DAN di Header x-api-key, ditambah timeout 5 detik
+    // Menambahkan apikey di URL DAN di Header x-api-key, ditambah timeout 10 detik
     const res1 = await fetch(`${base}/member/lana?priority_token=${apiKey}`, {
       method: "GET",
       headers: {
         "x-priority-token": apiKey,
         Accept: "application/json",
       },
-      signal: AbortSignal.timeout(5000),
+      signal: AbortSignal.timeout(10000),
       next: { revalidate: 60 },
     });
 
     // Jika masih 401, berarti Key memang ditolak oleh server pusat
     if (!res1.ok) {
-      console.error(`DEBUG: Upstream returned ${res1.status}`);
+      const errorText = await res1.text().catch(() => "Unknown error");
+      console.error(`DEBUG: Upstream returned ${res1.status} - ${errorText}`);
       return NextResponse.json(
         {
           success: false,
-          message: `JKT48Connect Error: ${res1.status}. Key mungkin salah.`,
+          message: `JKT48Connect Error: ${res1.status}.`,
         },
         { status: res1.status },
       );
@@ -60,7 +61,7 @@ export async function GET() {
     const showId = shows[0].id;
     const res2 = await fetch(`${base}/theater/${showId}?priority_token=${apiKey}`, {
       headers: { "x-priority-token": apiKey },
-      signal: AbortSignal.timeout(5000),
+      signal: AbortSignal.timeout(10000),
     });
 
     const body2 = await res2.json();

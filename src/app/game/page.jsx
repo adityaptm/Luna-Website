@@ -13,14 +13,16 @@ export default function GameLanaPage() {
         <p className="text-slate-800 dark:text-slate-300 text-lg font-medium">Mainkan game seru bertema Lana langsung dari browser kamu.</p>
       </div>
 
-      <section className="bg-slate-900 rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 md:border-4 border-accent relative aspect-[4/3] md:aspect-video w-full mb-12 min-h-[400px] md:min-h-0">
-        <iframe 
-          src={GAME_URL}
-          className="w-full h-full border-0"
-          title="Game Lana Go Fight"
-          allow="autoplay; fullscreen; keyboard"
-        />
-      </section>
+      <div className="max-w-[800px] mx-auto">
+        <section className="bg-slate-900 rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl border-2 md:border-4 border-accent relative aspect-[16/9] w-full mb-12 shadow-[0_0_30px_rgba(251,191,36,0.15)]">
+          <iframe 
+            src={GAME_URL}
+            className="w-full h-full border-0"
+            title="Game Lana Go Fight"
+            allow="autoplay; fullscreen; keyboard"
+          />
+        </section>
+      </div>
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-white dark:bg-slate-800 p-10 rounded-[32px] border-2 border-slate-100 dark:border-slate-700 mb-20 shadow-xl">
         <div>

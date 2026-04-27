@@ -42,7 +42,7 @@ export default function Header() {
               alt="LUNA Logo"
               width={36}
               height={36}
-              className="object-contain drop-shadow-[0_0_6px_rgba(59,130,246,0.5)]"
+              className="object-cover rounded-full border border-white/20 drop-shadow-[0_0_6px_rgba(59,130,246,0.5)]"
               priority
             />
             <span className="font-display text-[1.6rem] font-bold text-white tracking-[0.02em]">LUNA.</span>

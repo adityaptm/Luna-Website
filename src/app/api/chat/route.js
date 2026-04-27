@@ -15,8 +15,8 @@ export async function POST(req) {
       return NextResponse.json({ reply: "Luna lagi maintenance sebentar, coba lagi ya!" });
     }
 
-    // Menggunakan Gemini 3.1 sesuai dengan contoh yang berhasil
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key=${apiKey}`;
+    // Menggunakan Gemini 1.5 Flash yang stabil
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
     const prompt = `Kamu adalah Luna, asisten pribadi Aurhel Alana (JKT48 Gen 12). 
     Gaya bicara santai, ceria, friendly, panggil diri kamu 'aku'. Jawab dalam bahasa Indonesia yang natural.

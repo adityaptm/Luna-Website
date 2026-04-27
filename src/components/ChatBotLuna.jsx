@@ -49,7 +49,7 @@ export default function ChatBotLuna() {
               <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
                 <i className="bx bxs-moon text-b900 text-lg"></i>
               </div>
-              <span className="font-bold text-white">Luna temennya (ririn vallencia)</span>
+              <span className="font-bold text-white">Luna</span>
             </div>
             <button onClick={() => setIsOpen(false)} className="text-white hover:text-accent transition-colors">
               <i className="bx bx-chevron-down text-2xl"></i>

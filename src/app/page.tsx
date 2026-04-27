@@ -166,7 +166,7 @@ export default function AboutLanaPage() {
               </div>
             </div>
 
-            <div className="bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-2xl p-8 md:p-10 shadow-sm">
+            <div className="bg-slate-100 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-2xl p-5 md:p-8 shadow-sm max-w-[800px] mx-auto">
               <h3 className="font-display text-2xl font-bold text-slate-950 dark:text-white mb-2 flex items-center gap-3">
                 <i className="bx bx-library text-accent text-3xl"></i> Detail Unit Song Per Setlist
               </h3>
@@ -201,7 +201,7 @@ export default function AboutLanaPage() {
                       </button>
                       
                       {isOpen && (
-                        <div className="p-8 bg-white dark:bg-slate-900 border-t-2 border-slate-200 dark:border-slate-700">
+                        <div className="p-5 md:p-6 bg-white dark:bg-slate-900 border-t-2 border-slate-200 dark:border-slate-700">
                           <div className="flex flex-wrap gap-3">
                             {item.songs.map((song, si) => (
                               <div key={si} className="flex items-center gap-2 px-5 py-3 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 border-2 border-slate-200 dark:border-slate-700 rounded-2xl shadow-sm hover:border-accent transition-all cursor-default">
