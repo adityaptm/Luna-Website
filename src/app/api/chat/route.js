@@ -8,7 +8,7 @@ export async function POST(req) {
       return NextResponse.json({ reply: "Hmm, kamu nanya apa tadi? Aku kurang denger nih!" });
     }
 
-    const apiKey = process.env.GEMINI_API_KEY || "AIzaSyB7EDLRVQOeIeUmZU7qMYxyYTTci_arI_w";
+    const apiKey = process.env.GEMINI_API_KEY || "AIzaSyCoCQj0mQZertDnEwG3Ne0ImNOnu5n4jyo";
     
     if (!apiKey) {
       console.error("GEMINI_API_KEY tidak ditemukan di environment variables");
