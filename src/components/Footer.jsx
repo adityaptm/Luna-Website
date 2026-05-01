@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto mb-8 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
         <div className="flex flex-col">
           <h3 className="font-display text-b100 mb-3.5 text-[1.2rem]">Luna</h3>
-          <p className="text-white/60 text-[0.9rem] leading-[1.8]">Hai aku Aurhel Alana</p>
+          <p className="text-white/60 text-[0.9rem] leading-[1.8]">Hai aku Aurhel Alana Tirta</p>
         </div>
 
         <div className="flex flex-col">
@@ -47,7 +47,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-[1200px] mx-auto pt-5 border-t border-b100/10 text-center text-white/35 text-[0.82rem]">
-        <p>&copy; {currentYear} Aurhel Alana. All rights reserved.</p>
+        <p>&copy; {currentYear} Aurhel Alana Tirta. All rights reserved.</p>
       </div>
     </footer>
   );

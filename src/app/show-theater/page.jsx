@@ -15,7 +15,7 @@ const namaPanjang = {
   virgi: "Astrella Virgiananda",
   auwia: "Aulia Riza",
   lia: "Aurellia",
-  lana: "Aurhel Alana",
+  lana: "Aurhel Alana Tirta",
   rilly: "Bong Aprilli",
   cathy: "Cathleen Nixie",
   elin: "Celline Thefani",
@@ -174,7 +174,7 @@ export default function ShowTheaterLanaPage() {
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-4 border-b border-theme-border">
         <div>
           <h1 className="font-display text-3xl font-bold text-slate-900 dark:text-white mb-2">Show Theater Lana</h1>
-          <p className="text-slate-500 dark:text-slate-400 text-[0.95rem]">Jadwal Theater Terbaru Aurhel Alana.</p>
+          <p className="text-slate-500 dark:text-slate-400 text-[0.95rem]">Jadwal Theater Terbaru Aurhel Alana Tirta.</p>
         </div>
 
         <div className="flex items-center gap-3 mt-4 md:mt-0">

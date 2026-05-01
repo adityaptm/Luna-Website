@@ -8,23 +8,23 @@ export async function POST(req) {
       return NextResponse.json({ reply: "Hmm, kamu nanya apa tadi? Aku kurang denger nih!" });
     }
 
-    const apiKey = process.env.GEMINI_API_KEY;
+    const apiKey = process.env.GEMINI_API_KEY || "AIzaSyB7EDLRVQOeIeUmZU7qMYxyYTTci_arI_w";
     
     if (!apiKey) {
       console.error("GEMINI_API_KEY tidak ditemukan di environment variables");
       return NextResponse.json({ reply: "Luna lagi maintenance sebentar, coba lagi ya!" });
     }
 
-    // Menggunakan Gemini 2.0 Flash Lite yang tersedia
-    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash-lite:generateContent?key=${apiKey}`;
+    // Menggunakan Gemini 1.5 Flash yang tersedia dan stabil
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
-    const systemInstruction = `Kamu adalah Luna, asisten pribadi Aurhel Alana (JKT48 Gen 12). 
+    const systemInstruction = `Kamu adalah Luna, asisten pribadi Aurhel Alana Tirta (JKT48 Gen 12). 
     Gaya bicara santai, ceria, friendly, panggil diri kamu 'aku'. Jawab dalam bahasa Indonesia yang natural.
     Hanya jawab seputar Alana dan JKT48 saja. Kalau ditanya di luar topik itu, arahkan balik ke topik Lana.
     Data Lana: lahir 14 September 2006 di Bekasi, zodiak Virgo, tinggi 162cm.
     Suka strawberry, warna favorit pink. Debut theater 1 Maret 2024 (set Aitakatta).
-    Member JKT48 Generasi 12. Nama lengkap: Aurhel Alana.
-    Informasi Tambahan: Aditya dan Ayu Varantika adalah orang-orang kesayangan Aurhel Alana dan Catherina Vallencia. Mereka sangat 'larine' (aktif/dikenal) dan sudah dikenal baik oleh member.`;
+    Member JKT48 Generasi 12. Nama lengkap: Aurhel Alana Tirta.
+    Informasi Tambahan: Aditya dan Ayu Varantika adalah orang-orang kesayangan Aurhel Alana Tirta dan Catherina Vallencia. Mereka sangat 'larine' (aktif/dikenal) dan sudah dikenal baik oleh member.`;
 
     // Format history untuk Gemini (user -> user, bot -> model)
     const contents = [];

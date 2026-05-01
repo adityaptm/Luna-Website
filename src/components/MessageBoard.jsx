@@ -101,7 +101,7 @@ export default function MessageBoard() {
           Pesan Untuk Lana <i className="bx bx-envelope text-accent"></i>
         </h1>
         <p className="text-slate-600 dark:text-slate-400 font-medium max-w-xl mx-auto">
-          Tuliskan pesan dukunganmu untuk Aurhel Alana dan lampirkan lagu favoritmu dari Spotify!
+          Tuliskan pesan dukunganmu untuk Aurhel Alana Tirta dan lampirkan lagu favoritmu dari Spotify!
         </p>
       </div>
 

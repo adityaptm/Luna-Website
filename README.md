@@ -17,7 +17,6 @@ Website ini dirancang dengan estetika modern, fitur interaktif, dan integrasi AI
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 - **Styling**: Tailwind CSS 4
 - **AI**: Google Generative AI (Gemini 2.0 Flash)
-- **API**: JKT48Connect API v2
 - **Deployment**: Vercel
 
 ## 🛠️ Cara Menjalankan Secara Lokal

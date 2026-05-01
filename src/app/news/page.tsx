@@ -28,7 +28,7 @@ export default function AboutLana() {
     <div className="mx-auto flex max-w-[600px] flex-col gap-3 p-4 font-sans text-slate-900 dark:text-white selection:bg-b200/50">
       <div className="mb-6">
         <h1 className="font-display text-4xl font-bold text-slate-900 dark:text-white mb-2">News & Updates</h1>
-        <p className="text-slate-600 dark:text-slate-300 text-sm tracking-wide">Informasi terbaru seputar aktivitas Aurhel Alana.</p>
+        <p className="text-slate-600 dark:text-slate-300 text-sm tracking-wide">Informasi terbaru seputar aktivitas Aurhel Alana Tirta.</p>
       </div>
       
       {/* HERO CARD */}
@@ -38,7 +38,7 @@ export default function AboutLana() {
 
         <div className="relative z-10 flex gap-5">
           <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl border-[3px] border-white/30 bg-b600 shadow-inner">
-            <img src="/images/lana1.webp" alt="Aurhel Alana" className="h-full w-full object-cover" />
+            <img src="/images/lana1.webp" alt="Aurhel Alana Tirta" className="h-full w-full object-cover" />
           </div>
           <div className="flex-1 pt-1">
             <h1 className="text-3xl font-bold leading-[1.1] font-display">
@@ -74,7 +74,7 @@ export default function AboutLana() {
       <section className="rounded-[24px] border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-lg">
         <SectionLabel label="Profil Lana" />
         <div className="grid grid-cols-2 gap-3">
-          <InfoBox label="Nama Asli" value="Aurhel Alana" />
+          <InfoBox label="Nama Asli" value="Aurhel Alana Tirta" />
           <InfoBox label="Panggilan" value="Lana" />
           <InfoBox label="Tanggal Lahir" value="14 Sep 2006" />
           <InfoBox label="Zodiak" value="Virgo" />
@@ -100,6 +100,19 @@ export default function AboutLana() {
         </div>
       </section>
 
+      {/* SOCIAL MEDIA POSTS */}
+      <section className="rounded-[20px] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-5 shadow-sm">
+        <SectionLabel label="Latest Posts" />
+        <div className="flex flex-col gap-5">
+          <div className="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex justify-center w-full">
+            <iframe src="https://www.instagram.com/p/DXt_VxAE4Oj/embed" width="100%" height="450" frameBorder="0" scrolling="no" allowTransparency></iframe>
+          </div>
+          <div className="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 flex justify-center w-full">
+            <iframe src="https://www.threads.net/@jkt48.lana.a/post/DW3WfvFGtbe/embed" width="100%" height="450" frameBorder="0" scrolling="no" allowTransparency></iframe>
+          </div>
+          <div className="rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 p-2 flex justify-center w-full" dangerouslySetInnerHTML={{ __html: `<blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/AR_LanaJKT48/status/2048247400700256690"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>` }} />
+        </div>
+      </section>
       {/* VIDEO DEBUT */}
       <section className="rounded-[20px] border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-5 shadow-sm">
         <SectionLabel label="Video Debut" />

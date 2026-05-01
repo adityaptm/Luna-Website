@@ -21,12 +21,12 @@ export default function Home() {
 
             {/* Title dengan Gradient Halus */}
             <h1 className="text-4xl md:text-7xl font-display font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-b100 leading-tight">
-              Aurhel Alana <span className="text-b300">Gen 12</span>
+              Aurhel Alana Tirta <span className="text-b300">Gen 12</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-b50 font-medium mb-4 opacity-90">
-              Selamat datang di website resmi Aurhel Alana Generasi 12
+              Selamat datang di website resmi Aurhel Alana Tirta Generasi 12
             </p>
 
             {/* Description */}
@@ -74,7 +74,7 @@ export default function Home() {
               <i className="bx bx-group"></i>
             </div>
             <h3 className="font-bold text-[1.2rem] text-slate-950 dark:text-white mb-3">Komunitas Solid</h3>
-            <p className="text-slate-700 dark:text-slate-300 text-[0.95rem] leading-relaxed font-medium">Bergabunglah bersama kami untuk mendukung Aurhel Alana dengan antusiasme.</p>
+            <p className="text-slate-700 dark:text-slate-300 text-[0.95rem] leading-relaxed font-medium">Bergabunglah bersama kami untuk mendukung Aurhel Alana Tirta dengan antusiasme.</p>
           </div>
 
           <div className="bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all relative overflow-hidden group">

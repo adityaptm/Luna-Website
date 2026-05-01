@@ -13,16 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "LUNA.",
-  description: "Aurhel Alana - JKT48 Gen 12 fansite",
-  icons: {
-    icon: [
-      { url: "/images/luna.webp", type: "image/webp" },
-    ],
-    apple: [
-      { url: "/images/luna.webp", type: "image/webp" },
-    ],
-    shortcut: "/images/luna.webp",
-  },
+  description: "Aurhel Alana Tirta - JKT48 Gen 12 fansite",
 };
 
 export const viewport: Viewport = {

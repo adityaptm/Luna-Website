@@ -10,7 +10,7 @@ export default function GalleryPage() {
   return (
     <div className="w-full">
       <div className="mb-12">
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-950 dark:text-white mb-4">Gallery Aurhel Alana</h1>
+        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-950 dark:text-white mb-4">Gallery Aurhel Alana Tirta</h1>
         <p className="text-slate-800 dark:text-slate-300 text-lg mb-8 font-medium">Kumpulan momen dan foto-foto terbaik Lana.</p>
 
         <Link href="/about-lana" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-body text-[0.9rem] font-semibold transition-all border-2 border-accent text-accent hover:bg-accent/10 hover:-translate-y-0.5">

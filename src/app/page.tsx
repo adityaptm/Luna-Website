@@ -50,7 +50,7 @@ export default function AboutLanaPage() {
       <section className="bg-slate-900 text-white py-12 md:py-20 px-4 md:px-10 text-center rounded-3xl mb-16 relative overflow-hidden shadow-lg border border-slate-800">
         <div className="absolute inset-0 bg-[radial-gradient(1.5px_1.5px_at_15%_20%,rgba(255,255,255,0.7),transparent),radial-gradient(1px_1px_at_35%_60%,rgba(255,255,255,0.5),transparent),radial-gradient(2px_2px_at_55%_15%,rgba(255,255,255,0.6),transparent)] animate-starsFloat opacity-40"></div>
         <div className="relative z-10">
-          <h1 className="font-display text-4xl md:text-[3.8rem] font-black mb-4 tracking-tight leading-tight">Aurhel Alana</h1>
+          <h1 className="font-display text-4xl md:text-[3.8rem] font-black mb-4 tracking-tight leading-tight">Aurhel Alana Tirta</h1>
           <p className="text-[1.3rem] mb-[18px] opacity-90 font-light flex items-center justify-center gap-2">
             <i className="bx bx-info-circle text-accent"></i> Halaman informasi dan aktivitas Lana.
           </p>
@@ -81,11 +81,11 @@ export default function AboutLanaPage() {
             <h1 className="font-display text-4xl font-bold text-slate-950 dark:text-white mb-8 border-b-2 border-slate-100 dark:border-slate-700 pb-4">
               <i className="bx bx-user-circle text-accent"></i> Tentang Lana
             </h1>
-            <h2 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-6">Tentang Aurhel Alana</h2>
+            <h2 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-6">Tentang Aurhel Alana Tirta</h2>
 
             <div className="space-y-6">
               <p className="text-slate-800 dark:text-slate-200 leading-relaxed text-[1.05rem] font-medium">
-                Aurhel Alana merupakan salah satu member JKT48 Generasi ke-12 yang
+                Aurhel Alana Tirta merupakan salah satu member JKT48 Generasi ke-12 yang
                 memiliki aura lembut dan pembawaan yang tenang namun penuh pesona.
                 Lahir pada 14 September 2006 di Bekasi, ia memiliki zodiak Virgo dengan tinggi sekitar 162 cm.
               </p>

@@ -8,7 +8,7 @@ export default function AboutLana() {
   return (
     <div className="w-full">
       <div className="mb-10">
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Biodata Aurhel Alana</h1>
+        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Biodata Aurhel Alana Tirta</h1>
         <p className="text-slate-600 dark:text-slate-300 text-lg">Profil lengkap dan perjalanan karir Lana di JKT48.</p>
       </div>
 
@@ -18,7 +18,7 @@ export default function AboutLana() {
       <section className="flex flex-col lg:flex-row gap-0 rounded-[32px] overflow-hidden mb-16 border-2 border-slate-100 dark:border-slate-700 shadow-2xl bg-white dark:bg-slate-800">
         <div className="flex-1 p-6 md:p-10 bg-transparent">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 mb-2">
-            <h1 className="font-display text-[2.2rem] font-bold text-slate-900 dark:text-white">Aurhel Alana</h1>
+            <h1 className="font-display text-[2.2rem] font-bold text-slate-900 dark:text-white">Aurhel Alana Tirta</h1>
             <button className="bg-transparent border-[1.5px] border-theme-border-md text-slate-900 dark:text-white px-4 py-1.5 rounded-full text-[0.78rem] font-bold tracking-[0.08em] cursor-pointer font-body transition-all hover:bg-accent hover:text-b900 hover:border-accent">
               + FOLLOW
             </button>
@@ -30,7 +30,7 @@ export default function AboutLana() {
               <span className="font-bold text-slate-950 dark:text-white min-w-[140px] flex items-center gap-2">
                 <i className="bx bx-id-card text-accent"></i> Nama Asli
               </span>
-              <span className="text-slate-800 dark:text-slate-200 text-right font-medium">Aurhel Alana</span>
+              <span className="text-slate-800 dark:text-slate-200 text-right font-medium">Aurhel Alana Tirta</span>
             </div>
             <div className="flex justify-between items-center py-3 border-b border-slate-100 dark:border-slate-800 last:border-b-0">
               <span className="font-bold text-slate-950 dark:text-white min-w-[140px] flex items-center gap-2">
@@ -129,7 +129,7 @@ export default function AboutLana() {
 
         <div className="flex-none w-full lg:w-[360px] bg-slate-50 dark:bg-slate-800/30 p-6 flex flex-col items-center border-t lg:border-t-0 lg:border-l border-slate-200 dark:border-slate-700">
           <div className="w-full aspect-[3/4] max-w-[300px] lg:max-w-none rounded-2xl overflow-hidden shadow-md mb-5 border border-theme-border">
-            <img src="/images/lana1.webp" alt="Aurhel Alana" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+            <img src="/images/lana1.webp" alt="Aurhel Alana Tirta" className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
           </div>
 
           <div className="grid grid-cols-3 gap-2.5 mb-5 w-full">
