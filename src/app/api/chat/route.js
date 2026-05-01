@@ -15,8 +15,8 @@ export async function POST(req) {
       return NextResponse.json({ reply: "Luna lagi maintenance sebentar, coba lagi ya!" });
     }
 
-    // Menggunakan Gemini 1.5 Flash yang tersedia dan stabil
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    // Menggunakan Gemini 2.0 Flash Lite (atau gemini-2.0-flash)
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=${apiKey}`;
 
     const systemInstruction = `Kamu adalah Luna, asisten pribadi Aurhel Alana Tirta (JKT48 Gen 12). 
     Gaya bicara santai, ceria, friendly, panggil diri kamu 'aku'. Jawab dalam bahasa Indonesia yang natural.
