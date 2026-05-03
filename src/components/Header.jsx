@@ -9,7 +9,6 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Cek tema dari localStorage saat component mount
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       setIsDarkMode(true);
@@ -49,7 +48,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Hamburger Menu Button */}
         <button
           className="md:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer p-[6px]"
           onClick={toggleMobileMenu}
@@ -60,7 +58,6 @@ export default function Header() {
           <span className={`w-6 h-[2px] bg-white rounded-[2px] transition-all duration-300 ${isMobileMenuOpen ? "-rotate-45 translate-x-[5px] -translate-y-[5px]" : ""}`}></span>
         </button>
 
-        {/* Navigation Links */}
         <div className={`flex flex-col md:flex-row md:items-center gap-2 absolute md:static top-16 left-0 right-0 bg-b900 md:bg-transparent px-10 md:px-0 py-4 md:py-0 transition-all duration-300 ${isMobileMenuOpen ? "flex" : "hidden md:flex"}`}>
           <Link 
             href="/" 

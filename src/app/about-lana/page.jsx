@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import { Tweet } from "react-tweet";
 
 export default function AboutLana() {
   // GANTI pakai ID video YouTube Lana
@@ -19,9 +20,9 @@ export default function AboutLana() {
         <div className="flex-1 p-6 md:p-10 bg-transparent">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3.5 mb-2">
             <h1 className="font-display text-[2.2rem] font-bold text-slate-900 dark:text-white">Aurhel Alana Tirta</h1>
-            <button className="bg-transparent border-[1.5px] border-theme-border-md text-slate-900 dark:text-white px-4 py-1.5 rounded-full text-[0.78rem] font-bold tracking-[0.08em] cursor-pointer font-body transition-all hover:bg-accent hover:text-b900 hover:border-accent">
+            <a href="https://www.idn.app/jkt48_lana" target="_blank" rel="noreferrer" className="inline-block bg-transparent border-[1.5px] border-theme-border-md text-slate-900 dark:text-white px-4 py-1.5 rounded-full text-[0.78rem] font-bold tracking-[0.08em] cursor-pointer font-body transition-all hover:bg-accent hover:text-b900 hover:border-accent">
               + FOLLOW
-            </button>
+            </a>
           </div>
           <p className="text-[0.88rem] text-slate-500 dark:text-slate-400 mb-7 italic">Indonesia • Bekasi</p>
 
@@ -96,31 +97,28 @@ export default function AboutLana() {
           <div>
             <h3 className="text-[0.75rem] tracking-[0.15em] uppercase text-slate-500 dark:text-slate-400 mb-3.5">LANA&apos;S SOCIAL MEDIA</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="https://x.com/AR_LanaJKT48" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-theme-border-md bg-theme-soft text-slate-900 dark:text-white flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm font-bold" aria-label="X">
+              <a href="https://x.com/AR_LanaJKT48" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-accent flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm font-bold" aria-label="X">
                 X
               </a>
 
-              <a href="https://www.instagram.com/jkt48.lana.a/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-theme-border-md bg-theme-soft text-slate-900 dark:text-white flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm" aria-label="Instagram">
+              <a href="https://www.instagram.com/jkt48.lana.a/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-accent flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm" aria-label="Instagram">
                 <i className="bx bxl-instagram text-xl"></i>
               </a>
 
-              <a href="https://www.tiktok.com/@jkt48.lana" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-theme-border-md bg-theme-soft text-slate-900 dark:text-white flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm" aria-label="TikTok">
+              <a href="https://www.tiktok.com/@jkt48.lana" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-accent flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm" aria-label="TikTok">
                 <i className="bx bxl-tiktok text-xl"></i>
               </a>
 
-              <a href="https://www.youtube.com/@JKT48" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-theme-border-md bg-theme-soft text-slate-900 dark:text-white flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm" aria-label="YouTube">
-                <i className="bx bxl-youtube text-xl"></i>
-              </a>
 
               <a
                 href="https://www.showroom-live.com/r/JKT48_Lana"
                 target="_blank" rel="noreferrer"
-                className="w-10 h-10 rounded-full border border-theme-border-md bg-theme-soft text-slate-900 dark:text-white flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm font-bold text-[0.75rem]"
+                className="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-accent flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm font-bold text-[0.75rem]"
                 aria-label="Showroom"
               >
                 SR
               </a>
-              <a href="https://www.idn.app/jkt48_lana" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-theme-border-md bg-theme-soft text-slate-900 dark:text-white flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm font-bold text-[0.75rem]" aria-label="IDN">
+              <a href="https://www.idn.app/jkt48_lana" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-accent flex items-center justify-center transition-all hover:-translate-y-1 hover:border-accent hover:text-accent shadow-sm font-bold text-[0.75rem]" aria-label="IDN">
                 IDN
               </a>
             </div>
@@ -157,36 +155,31 @@ export default function AboutLana() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1">
-            <iframe src="https://www.instagram.com/p/DXt_VxAE4Oj/embed" width="100%" height="450" frameBorder="0" scrolling="no" allowTransparency></iframe>
+            <iframe src="https://www.instagram.com/p/DXt_VxAE4Oj/embed" width="100%" height="450" frameBorder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
 
-          <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1 p-2" dangerouslySetInnerHTML={{ __html: `<blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/AR_LanaJKT48/status/2048247400700256690"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>` }} />
+          <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1 p-2 items-center justify-center">
+            <Tweet id="2050234139648139697" />
+          </div>
 
           <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1">
-            <iframe src="https://www.threads.net/@jkt48.lana.a/post/DW3WfvFGtbe/embed" width="100%" height="450" frameBorder="0" scrolling="no" allowTransparency></iframe>
+            <iframe src="https://www.threads.net/@jkt48.lana.a/post/DW3WfvFGtbe/embed" width="100%" height="450" frameBorder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
 
-          {/* IDN Embed Player Section */}
           <div className="lg:col-span-3 bg-white dark:bg-slate-800 rounded-3xl border-2 border-slate-100 dark:border-slate-700 shadow-lg overflow-hidden flex flex-col">
             <div className="bg-slate-50 dark:bg-slate-900 p-5 flex items-center justify-between border-b-2 border-slate-100 dark:border-slate-700">
               <div className="flex items-center gap-3 font-bold text-slate-950 dark:text-white">
                 <span className="bg-red-600 text-white px-2.5 py-1 rounded-lg text-xs uppercase tracking-tighter shadow-sm font-black">LIVE</span> 
                 <span className="flex items-center gap-2">
-                  <i className="bx bx-play-circle text-red-500 text-xl"></i> IDN Live Embed
+                  <i className="bx bx-play-circle text-red-500 text-xl"></i> Lana IDN Live
                 </span>
               </div>
               <a href="https://www.idn.app/jkt48_lana" target="_blank" rel="noreferrer" className="text-xs text-accent font-black hover:underline flex items-center gap-1 uppercase tracking-wider">
                 Buka di IDN <i className="bx bx-link-external"></i>
               </a>
             </div>
-            <div className="aspect-video w-full bg-black">
-              <iframe
-                src="https://www.idn.app/embed-player/haiiii-260426221201"
-                title="Lana IDN Live"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full border-0"
-              />
+            <div className="p-10 text-center bg-slate-950 text-white/50 italic text-[0.9rem]">
+              Klik tombol di atas untuk menonton live terbaru Lana di IDN.
             </div>
           </div>
 
@@ -256,7 +249,7 @@ export default function AboutLana() {
               <img src="/images/kabesha1.webp" alt="Lana Kabesha 2023" className="w-full h-full object-cover" />
             </div>
             <figcaption className="text-center">
-              <div className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1">2023</div>
+              <div className="font-display text-2xl font-bold text-slate-900 mb-1">2023</div>
               <div className="text-[0.9rem] text-slate-500 dark:text-slate-400 font-medium">First Lana&apos;s Kabesha</div>
               <div className="text-[0.8rem] text-b500 font-semibold mt-1 bg-theme-soft inline-block px-3 py-1 rounded-full">As a Trainee Member</div>
             </figcaption>
@@ -267,7 +260,7 @@ export default function AboutLana() {
               <img src="/images/kabesha2.webp" alt="Lana Kabesha 2025" className="w-full h-full object-cover" />
             </div>
             <figcaption className="text-center">
-              <div className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1">2025</div>
+              <div className="font-display text-2xl font-bold text-slate-900 mb-1">2025</div>
               <div className="text-[0.9rem] text-slate-500 dark:text-slate-400 font-medium">Lana&apos;s Kabesha</div>
               <div className="text-[0.8rem] text-b500 font-semibold mt-1 bg-theme-soft inline-block px-3 py-1 rounded-full">As a Regular Member</div>
             </figcaption>
@@ -278,7 +271,7 @@ export default function AboutLana() {
               <img src="/images/kabesha3.webp" alt="Lana Kabesha 2026" className="w-full h-full object-cover" />
             </div>
             <figcaption className="text-center">
-              <div className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1">2026</div>
+              <div className="font-display text-2xl font-bold text-slate-900 mb-1">2026</div>
               <div className="text-[0.9rem] text-slate-500 dark:text-slate-400 font-medium">Lana&apos;s Kabesha</div>
               <div className="text-[0.8rem] text-b500 font-semibold mt-1 bg-theme-soft inline-block px-3 py-1 rounded-full">As a Regular Member</div>
             </figcaption>
@@ -289,7 +282,7 @@ export default function AboutLana() {
               <img src="/images/aurhel.webp" alt="Lana Love Team" className="w-full h-full object-cover" />
             </div>
             <figcaption className="text-center">
-              <div className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1">2026</div>
+              <div className="font-display text-2xl font-bold text-slate-900 mb-1">2026</div>
               <div className="text-[0.9rem] text-slate-500 dark:text-slate-400 font-medium">Love Team Kabesha</div>
               <div className="text-[0.8rem] text-b500 font-semibold mt-1 bg-theme-soft inline-block px-3 py-1 rounded-full">As a Love Team Member</div>
             </figcaption>

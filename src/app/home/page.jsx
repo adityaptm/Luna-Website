@@ -3,9 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-32 lg:pt-32 lg:pb-40 rounded-3xl bg-b900 text-white mb-16 border border-b100/10 shadow-lg">
-        {/* Dekorasi Background Latar (Tetap sesuai tema warna) */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 overflow-hidden rounded-3xl">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-b500/20 blur-[120px]" />
           <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] rounded-full bg-b200/10 blur-[100px]" />
@@ -14,29 +12,24 @@ export default function Home() {
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Badge Kecil di Atas */}
             <span className="inline-block py-1.5 px-4 rounded-full bg-b600/20 border border-b400/30 text-b100 text-xs font-bold tracking-[0.15em] uppercase mb-6 shadow-sm">
               Official Fan Page
             </span>
 
-            {/* Title dengan Gradient Halus */}
             <h1 className="text-4xl md:text-7xl font-display font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-b100 leading-tight">
               Aurhel Alana Tirta <span className="text-b300">Gen 12</span>
             </h1>
 
-            {/* Subtitle */}
             <p className="text-lg md:text-xl text-b50 font-medium mb-4 opacity-90">
               Selamat datang di website resmi Aurhel Alana Tirta Generasi 12
             </p>
 
-            {/* Description */}
             <p className="text-white/75 leading-relaxed max-w-2xl mx-auto mb-10 text-[1.05rem]">
               Kami adalah komunitas yang berdedikasi untuk berkembang bersama
               melalui berbagai kegiatan seni, teater, dan pembelajaran kreatif
               yang menginspirasi setiap langkah perjalanan kami.
             </p>
 
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/about-lana"
@@ -56,7 +49,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="mb-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-3xl p-8 text-center shadow-md hover:shadow-xl transition-all relative overflow-hidden group">

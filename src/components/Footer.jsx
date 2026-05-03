@@ -24,9 +24,6 @@ export default function Footer() {
             <li>
               <a href="/gallery" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">Gallery</a>
             </li>
-            <li>
-              <a href="/news" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">News</a>
-            </li>
           </ul>
         </div>
 
