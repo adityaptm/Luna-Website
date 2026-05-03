@@ -180,7 +180,7 @@ export default function AboutLana() {
           </div>
 
           <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1 p-2 items-center justify-center">
-            <Tweet id="2050234139648139697" />
+            <Tweet id="2050953297947992286" />
           </div>
 
           <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1">

@@ -32,7 +32,10 @@ export default function GalleryPage() {
     { src: "/images/luna25.jpg", alt: "Luna 25" },
     { src: "/images/luna26.jpg", alt: "Luna 26" },
     { src: "/images/luna27.jpg", alt: "Luna 27" },
-    { src: "/images/luna28.jpg", alt: "Luna 28" }
+    { src: "/images/luna28.jpg", alt: "Luna 28" },
+    { src: "/images/luna29.jpg", alt: "Luna 29" },
+    { src: "/images/luna30.jpg", alt: "Luna 30" },
+    { src: "/images/luna31.jpg", alt: "Luna 31" }
   ];
 
   return (
@@ -47,7 +50,7 @@ export default function GalleryPage() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-20">
-        {photos.map((p, i) => (
+        {[...photos].reverse().map((p, i) => (
           <a key={i} href={p.src} className="block w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-slate-100 dark:border-slate-800 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group" target="_blank" rel="noreferrer">
             <img src={p.src} alt={p.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
           </a>
