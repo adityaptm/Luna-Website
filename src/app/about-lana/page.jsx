@@ -63,6 +63,16 @@ const namaPanjang = {
   kimmy: "Victoria Kimberly",
 };
 
+const rekapData = [
+  { setlist: "Aitakatta", unitSongs: ["Nageki no Figure", "Namida no Shounan", "Nagisa no Cherry", "Koi no Plan", "Senaka Kara Dakishimete"] },
+  { setlist: "Pajama Drive", unitSongs: ["Pajama Drive", "Kagami no Naka no Jean Da Arc"] },
+  { setlist: "Ramune no Nomikata", unitSongs: ["Manazashi Sayonara", "Nice to Meet You"] },
+  { setlist: "Te wo Tsunaginagara", unitSongs: ["Kono Mune no Barcode"] },
+  { setlist: "Renai Kinshi Jourei", unitSongs: ["Manatsu no Christmas Rose"] },
+  { setlist: "Pertaruhan Cinta", unitSongs: ["Dai Dai Dai"] },
+  { setlist: "Itadaki Love", unitSongs: ["Hatsukoi Dorobou"] },
+];
+
 function normalizeKey(name) {
   return (name || "").toLowerCase().trim();
 }
@@ -489,17 +499,27 @@ export default function AboutLana() {
             </div>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Rekap Show Lana</h2>
             <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-8">
-              Fitur Rekap Show sedang dalam pengembangan. Kamu bisa melihat riwayat penampilan Lana di theater JKT48 segera!
+              Riwayat penampilan Lana di theater JKT48. Data ini mencakup berbagai setlist dan unit song yang pernah dibawakan.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="px-6 py-3 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-700">
-                <div className="text-2xl font-black text-accent">--</div>
+                <div className="text-2xl font-black text-accent">76</div>
                 <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Show</div>
               </div>
               <div className="px-6 py-3 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-700">
-                <div className="text-2xl font-black text-accent">--</div>
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Setlist Berbeda</div>
+                <div className="text-2xl font-black text-accent">7</div>
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Setlist</div>
               </div>
+              <div className="px-6 py-3 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-700">
+                <div className="text-2xl font-black text-accent">13</div>
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Unit Song</div>
+              </div>
+            </div>
+
+            <div className="max-w-3xl mx-auto text-left">
+              {rekapData.map((item, i) => (
+                <RekapItem key={i} setlist={item.setlist} unitSongs={item.unitSongs} />
+              ))}
             </div>
           </div>
         </section>
@@ -673,6 +693,39 @@ export default function AboutLana() {
           ))}
         </div>
       </section>
+    </div>
+  );
+}
+
+
+
+function RekapItem({ setlist, unitSongs }) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden transition-all mb-4">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full p-5 text-left flex items-center justify-between gap-4 group"
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-full bg-accent/10 text-accent flex items-center justify-center">
+            <i className="bx bx-music text-xl"></i>
+          </div>
+          <span className="font-bold text-slate-900 dark:text-white group-hover:text-accent transition-colors text-lg">{setlist}</span>
+        </div>
+        <i className={`bx ${isOpen ? 'bx-chevron-up' : 'bx-chevron-down'} text-2xl text-slate-400`}></i>
+      </button>
+      {isOpen && (
+        <div className="px-6 pb-6 pt-2 animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className="flex flex-wrap gap-2">
+            {unitSongs.map((song, idx) => (
+              <span key={idx} className="px-4 py-2 bg-slate-50 dark:bg-slate-900/50 text-slate-700 dark:text-slate-300 rounded-xl text-sm font-medium border border-slate-100 dark:border-slate-700">
+                {song}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
