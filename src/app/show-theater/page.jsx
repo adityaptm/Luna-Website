@@ -263,9 +263,9 @@ export default function ShowTheaterLanaPage() {
                     </a>
                   ) : null}
 
-                  {show?.idnTheater?.slug ? (
+                  {(show?.idnTheater?.slug || show?.idnTheater) ? (
                     <a
-                      href={`https://www.idn.app/live/${show.idnTheater.slug}`}
+                      href={show?.idnTheater?.slug ? `https://www.idn.app/jkt48-official/live/${show.idnTheater.slug}` : `https://www.idn.app/jkt48-official/live/${show.idnTheater}`}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-body text-[0.9rem] font-semibold cursor-pointer transition-all border-2 border-accent text-accent bg-transparent hover:bg-accent/10 hover:-translate-y-0.5"

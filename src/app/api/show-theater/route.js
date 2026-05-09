@@ -74,6 +74,7 @@ export async function GET() {
         date: show.date || "",
         poster: show.poster || show.setlist?.poster || "",
         members: show.members || show.lineup || [],
+        idnTheater: show.idnTheater || null,
       },
     });
   } catch (err) {
