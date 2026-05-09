@@ -99,6 +99,30 @@ export default function AboutLana() {
   const [activeTab, setActiveTab] = useState("profile"); // profile, rekap, theater, hashtag
 
 
+  const [liveData, setLiveData] = useState(null);
+  const [liveLoading, setLiveLoading] = useState(true);
+
+  const loadLiveStatus = async () => {
+    setLiveLoading(true);
+    try {
+      const res = await fetch("/api/lana-live");
+      const json = await res.json();
+      if (json.success) {
+        setLiveData(json.data);
+      }
+    } catch (err) {
+      console.error("Failed to fetch live status:", err);
+    } finally {
+      setLiveLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadLiveStatus();
+    const id = setInterval(loadLiveStatus, 60000); // 1 minute
+    return () => clearInterval(id);
+  }, []);
+
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -121,7 +145,7 @@ export default function AboutLana() {
   return (
     <div className="w-full">
       <div className="mb-8">
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Aurhel Alana Tirta</h1>
+        <h1 className="font-display text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-4 tracking-tight leading-tight">Aurhel Alana Tirta</h1>
         <p className="text-slate-600 dark:text-slate-300 text-lg">Halaman resmi informasi dan update terbaru Lana JKT48.</p>
       </div>
 
@@ -299,28 +323,16 @@ export default function AboutLana() {
           </div>
 
           <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1 p-2 items-center justify-center">
-            <Tweet id="2050953297947992286" />
+            <Tweet id="2052791404452262156" />
           </div>
 
           <div className="bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-100 dark:border-slate-700 shadow-md overflow-hidden flex flex-col group transition-all w-full flex-1">
             <iframe src="https://www.threads.net/@jkt48.lana.a/post/DW3WfvFGtbe/embed" width="100%" height="450" frameBorder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
 
-          <div className="lg:col-span-3 bg-white dark:bg-slate-800 rounded-3xl border-2 border-slate-100 dark:border-slate-700 shadow-lg overflow-hidden flex flex-col">
-            <div className="bg-slate-50 dark:bg-slate-900 p-5 flex items-center justify-between border-b-2 border-slate-100 dark:border-slate-700">
-              <div className="flex items-center gap-3 font-bold text-slate-950 dark:text-white">
-                <span className="bg-red-600 text-white px-2.5 py-1 rounded-lg text-xs uppercase tracking-tighter shadow-sm font-black">LIVE</span> 
-                <span className="flex items-center gap-2">
-                  <i className="bx bx-play-circle text-red-500 text-xl"></i> Lana IDN Live
-                </span>
-              </div>
-              <a href="https://www.idn.app/jkt48_lana" target="_blank" rel="noreferrer" className="text-xs text-accent font-black hover:underline flex items-center gap-1 uppercase tracking-wider">
-                Buka di IDN <i className="bx bx-link-external"></i>
-              </a>
-            </div>
-            <div className="p-10 text-center bg-slate-950 text-white/50 italic text-[0.9rem]">
-              Klik tombol di atas untuk menonton live terbaru Lana di IDN.
-            </div>
+          {/* Lana Live Status (Dynamic) */}
+          <div className="lg:col-span-3">
+            <LiveStatus data={liveData} loading={liveLoading} />
           </div>
 
           {/* TikTok Embed */}
@@ -501,6 +513,91 @@ export default function AboutLana() {
 }
 
 
+
+function LiveStatus({ data, loading }) {
+  if (loading) {
+    return (
+      <div className="bg-white dark:bg-slate-800 rounded-3xl border-2 border-slate-100 dark:border-slate-700 shadow-lg overflow-hidden p-10 flex flex-col items-center justify-center gap-4">
+        <div className="w-8 h-8 border-4 border-slate-200 dark:border-slate-700 border-t-accent rounded-full animate-spin" />
+        <p className="text-slate-500 dark:text-slate-400 font-medium">Mengecek status live Lana...</p>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div className="bg-white dark:bg-slate-800 rounded-3xl border-2 border-slate-100 dark:border-slate-700 shadow-lg overflow-hidden flex flex-col">
+        <div className="bg-slate-50 dark:bg-slate-900 p-5 flex items-center justify-between border-b-2 border-slate-100 dark:border-slate-700">
+          <div className="flex items-center gap-3 font-bold text-slate-950 dark:text-white">
+            <span className="bg-slate-400 text-white px-2.5 py-1 rounded-lg text-xs uppercase tracking-tighter shadow-sm font-black">OFFLINE</span> 
+            <span className="flex items-center gap-2">
+              <i className="bx bx-moon text-slate-400 text-xl"></i> Lana is Offline
+            </span>
+          </div>
+        </div>
+        <div className="p-10 text-center bg-slate-950 text-white/50 italic text-[0.9rem]">
+          Lana sedang tidak live saat ini. Pantau terus sosial medianya ya!
+        </div>
+      </div>
+    );
+  }
+
+  const isIDN = data.type === "idn";
+  const liveUrl = isIDN 
+    ? `https://www.idn.app/live/${data.slug || data.url_key}` 
+    : `https://www.showroom-live.com/r/${data.url_key}`;
+
+  return (
+    <div className="bg-white dark:bg-slate-800 rounded-3xl border-2 border-slate-100 dark:border-slate-700 shadow-xl overflow-hidden flex flex-col md:flex-row transition-all hover:shadow-2xl">
+      <div className="md:w-1/3 relative aspect-video md:aspect-auto">
+        <img 
+          src={data.img || data.img_alt || "https://img.jkt48connect.com/jkt48/members/api/v1/storages/media/jkt48-member/jkt48logo.jpg"} 
+          alt={`Live Stream: ${data.name}`} 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute top-4 left-4">
+          <span className="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-black animate-pulse shadow-lg">LIVE</span>
+        </div>
+        {isIDN && (
+          <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-lg text-[0.65rem] font-bold text-slate-900 dark:text-white flex items-center gap-1.5 shadow-sm">
+            <i className="bx bxs-video text-red-500"></i> IDN LIVE
+          </div>
+        )}
+        {!isIDN && (
+          <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-lg text-[0.65rem] font-bold text-slate-900 dark:text-white flex items-center gap-1.5 shadow-sm">
+            <i className="bx bxs-star text-blue-500"></i> SHOWROOM
+          </div>
+        )}
+      </div>
+      
+      <div className="flex-1 p-6 md:p-8 flex flex-col justify-between">
+        <div>
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-accent text-xs font-black uppercase tracking-widest">{data.type} STREAMING</span>
+            <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+            <span className="text-slate-500 text-xs font-medium">Started {new Date(data.started_at).toLocaleTimeString("id-ID", { hour: '2-digit', minute: '2-digit' })} WIB</span>
+          </div>
+          <h3 className="text-2xl font-black text-slate-950 dark:text-white mb-4 leading-tight">
+            {data.slug?.replace(/-/g, ' ').replace(/\d+$/, '') || data.name || "Lana is Live!"}
+          </h3>
+          <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-2 mb-6">
+            Yuk tonton live Lana sekarang! Jangan lupa kasih gift dan dukung Lana ya.
+          </p>
+        </div>
+        
+        <a 
+          href={liveUrl} 
+          target="_blank" 
+          rel="noreferrer" 
+          className="inline-flex items-center justify-center gap-2 w-full md:w-fit bg-accent text-slate-900 px-8 py-3.5 rounded-2xl font-black text-[0.9rem] transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-accent/25 active:scale-95"
+        >
+          <i className={`bx ${isIDN ? 'bx-play-circle' : 'bx-broadcast'} text-xl`}></i>
+          TONTON SEKARANG
+        </a>
+      </div>
+    </div>
+  );
+}
 
 function RekapItem({ setlist, unitSongs }) {
   const [isOpen, setIsOpen] = useState(false);

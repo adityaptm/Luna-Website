@@ -5,24 +5,36 @@ export default function Footer() {
     <footer className="bg-b900 text-white/85 px-10 pt-12 pb-6 mt-auto border-t border-b100/10">
       <div className="max-w-[1200px] mx-auto mb-8 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
         <div className="flex flex-col">
-          <h3 className="font-display text-b100 mb-3.5 text-[1.2rem]">Luna</h3>
-          <p className="text-white/60 text-[0.9rem] leading-[1.8]">Hai aku Aurhel Alana Tirta</p>
+          <h3 className="font-display text-b100 mb-3.5 text-[1.2rem]">LUNA.</h3>
+          <p className="text-white/60 text-[0.9rem] leading-[1.8]">
+            Website fansite didedikasikan untuk mendukung perjalanan Aurhel Alana Tirta di JKT48. 
+            Bersama kita dukung Lana untuk terus bersinar!
+          </p>
         </div>
 
         <div className="flex flex-col">
           <h4 className="text-b200 mb-2.5 text-[1rem]">Navigasi</h4>
           <ul className="list-none flex flex-col gap-3">
             <li>
-              <a href="/home" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">Home</a>
+              <a href="/" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">Home</a>
             </li>
             <li>
               <a href="/about-lana" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">About Lana</a>
             </li>
             <li>
-              <a href="/show-theater" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">Show Theater</a>
+              <a href="/about-luna" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">About Luna</a>
             </li>
             <li>
               <a href="/gallery" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">Gallery</a>
+            </li>
+            <li>
+              <a href="/news" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">News</a>
+            </li>
+            <li>
+              <a href="/birthday" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">Birthday</a>
+            </li>
+            <li>
+              <a href="/show-theater" className="text-white/60 text-[0.9rem] leading-[1.8] transition-colors duration-200 hover:text-accent">Show Theater</a>
             </li>
           </ul>
         </div>
@@ -50,7 +62,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-[1200px] mx-auto pt-5 border-t border-b100/10 text-center text-white/35 text-[0.82rem]">
-        <p>&copy; {currentYear} Aurhel Alana Tirta. All rights reserved.</p>
+        <p>&copy; {currentYear} LARINEDITYU ALL RIGHT RESERVED</p>
       </div>
     </footer>
   );

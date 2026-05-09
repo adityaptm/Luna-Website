@@ -49,7 +49,7 @@ export default function AboutLanaPage() {
       <section className="bg-slate-900 text-white py-12 md:py-20 px-4 md:px-10 text-center rounded-3xl mb-16 relative overflow-hidden shadow-lg border border-slate-800">
         <div className="absolute inset-0 bg-[radial-gradient(1.5px_1.5px_at_15%_20%,rgba(255,255,255,0.7),transparent),radial-gradient(1px_1px_at_35%_60%,rgba(255,255,255,0.5),transparent),radial-gradient(2px_2px_at_55%_15%,rgba(255,255,255,0.6),transparent)] animate-starsFloat opacity-40"></div>
         <div className="relative z-10">
-          <h1 className="font-display text-4xl md:text-[3.8rem] font-black mb-4 tracking-tight leading-tight">Aurhel Alana Tirta</h1>
+          <h1 className="font-display text-4xl md:text-[4rem] font-black mb-4 tracking-tight leading-tight">Aurhel Alana Tirta</h1>
           <p className="text-[1.3rem] mb-[18px] opacity-90 font-light flex items-center justify-center gap-2">
             <i className="bx bx-info-circle text-accent"></i> Halaman informasi dan aktivitas Lana.
           </p>
